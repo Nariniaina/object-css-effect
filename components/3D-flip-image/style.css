@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;600;700;800;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.box {
+  margin-top: 100px;
+  position: relative;
+  width: 600px;
+  height: 400px;
+}
+
+.box .face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+
+.box .face span {
+  width: 150px;
+  height: 100%;
+  transition: 1s;
+  /* background: #000; */
+}
+
+.box .face.face1 span {
+  background: url("./img/bg1.jpg") center/cover no-repeat;
+  transform-origin: top;
+  /* transform-origin : make the element always go to
+  the top */
+}
+
+.box:hover .face.face1 span {
+  transform: rotateX(90deg) translateY(-50%);
+  /* rotateX(90deg) translateY(-50%) : 
+  minify the element and go to top */
+}
+
+.box .face.face2 span {
+  background: url("./img/bg2.jpg") center/cover no-repeat;
+  transform-origin: bottom;
+  /* transform-origin : make the element always go to
+    the bottom */
+  transform: rotateX(90deg) translateY(50%);
+  /* rotateX(90deg) translateY(-50%) : 
+    minify the element and go to top */
+}
+
+.box:hover .face.face2 span {
+  transform: rotateX(0deg) translateY(0);
+  /* rotateX(0deg) translateY(0) : 
+    reverse to the origin */
+}
+
+.box .face span:nth-child(1) {
+  background-position-x: 0;
+  transition-delay: 0s;
+}
+
+/* background-position-x: -150px; :
+make to position righter so the image is like normal
+and not look like separate */
+.box .face span:nth-child(2) {
+  background-position-x: -150px;
+  transition-delay: 0.2s;
+}
+
+.box .face span:nth-child(3) {
+  background-position-x: -300px;
+  transition-delay: 0.4s;
+}
+
+.box .face span:nth-child(4) {
+  background-position-x: -450px;
+  transition-delay: 0.6s;
+}
