@@ -8,12 +8,12 @@
 }
 
 body {
-  padding-top: 30px;
   padding-bottom: 200px;
 }
 
 .title {
   margin-left: 50px;
+  margin-top: 50px;
   margin-bottom: 50px;
 }
 
